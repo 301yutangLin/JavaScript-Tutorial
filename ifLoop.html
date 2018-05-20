@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+
+<p>What is the magic word?</p>
+<input id="inputText" type="text">
+<button id="enterText">Check</button>
+<p id="correctInput"></p>
+
+<script type="text/javascript">
+
+    document.getElementById("enterText").onclick = function () {
+        var textEntered = document.getElementById("inputText").value;
+        var magicWord = "Tony";
+        if(textEntered == magicWord){
+            document.getElementById("correctInput").innerHTML = "Correct Magic Word: " + textEntered;
+        } else{
+            document.getElementById("correctInput").innerHTML = "Wrong Magic Word: " + textEntered;
+        }
+        document.getElementById("inputText").value = "";
+    }
+
+</script>
+
+</body>
+</html>
